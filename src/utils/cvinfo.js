@@ -178,7 +178,7 @@ export const dataEnglish = {
       ],
     },
     {
-      image: "/assets/iptvTrailers.PNG",
+      image: "/assets/trailers.png",
       title: "Iptv Trailers",
       description: "In this project I have simulated a Full Stack job creating a IPTV trailer of YouTube with different platforms",
       link: "https://github.com/nsr2020/Project13_Front",
