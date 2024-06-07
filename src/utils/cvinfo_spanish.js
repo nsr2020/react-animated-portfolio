@@ -133,7 +133,7 @@ export const dataSpanish = {
       ],
     },
     {
-      image: "/assets/music.png",
+      image: "/assets/musica.png",
       title: "MusicShop",
       description: "Este proyecto ha sido creado usando NodeJs y MongoDB y luego conectando la API a este Front que simula una tienda de música.",
       link: "https://github.com/nsr2020/Proyecto10_Front/tree/main/src/pages",
