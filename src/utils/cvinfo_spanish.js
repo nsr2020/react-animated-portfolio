@@ -178,7 +178,7 @@ export const dataSpanish = {
       ],
     },
     {
-      image: "/assets/trailers.png",
+      image: "https://res.cloudinary.com/dnju3aw4b/image/upload/v1717761526/PortFolio-React/trailers_zaaglv.png",
       title: "Iptv Trailers",
       description: "En este proyecto he simulado un trabajo Full Stack creando un trailer de IPTV de YouTube con diferentes plataformas.",
       link: "https://github.com/nsr2020/Project13_Front",
