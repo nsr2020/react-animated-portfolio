@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const variants = {
   open: {
@@ -13,6 +14,7 @@ const variants = {
     },
   },
 };
+
 const itemVariants = {
   open: {
     y: 0,
@@ -25,7 +27,22 @@ const itemVariants = {
 };
 
 const Links = () => {
-  const items = ["About", "Experience", "Studies", "Projects", "Contact"];
+  const itemsEnglish = ["About", "Experience", "Studies", "Projects", "Contact"];
+  const itemsSpanish = ["Sobre mi", "Experiencia", "Estudios", "Proyectos", "Contacto"];
+
+  const [items, setItems] =useState(itemsEnglish)
+  const language = localStorage.getItem("language")
+
+  useEffect(() => {
+   if (language === "en") {
+     setItems(itemsEnglish)
+   }else{
+     setItems(itemsSpanish)
+   }
+    },[language])
+
+
+ 
 
   return (
     <motion.div className="links" variants={variants}>

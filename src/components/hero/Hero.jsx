@@ -37,7 +37,7 @@ const sliderVariants = {
   },
 };
 
-const Hero = () => {
+const Hero = ({data}) => {
   return (
     <div className="hero">
       <div className="wrapper">
@@ -47,24 +47,11 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>Narciso Serrano</motion.h2>
-          <motion.h1 variants={textVariants}>
-            Full Stack Developer
-          </motion.h1>
-        {/*   <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              See the Latest Works
-            </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
-          </motion.div> */}
-          
-        {/*   <motion.img
-            variants={textVariants}
-            animate="scrollButton"
-            src="https://res.cloudinary.com/dnju3aw4b/image/upload/v1701961438/My%20CV/fotoMia_enxjjj.jpg"
-            alt="my picture"
-          /> */}
-          
+          <motion.h1 variants={textVariants}>{data.name}</motion.h1>
+          <motion.h2 variants={textVariants}>
+            {data.title}
+          </motion.h2>
+          <motion.p variants={textVariants}>{data.aboutMe}</motion.p>
         
         </motion.div>
       </div>
@@ -74,10 +61,10 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Narciso Serrano Rabal
+        data.name
       </motion.div>
       <div className="imageContainer">
-        <img src="https://res.cloudinary.com/dnju3aw4b/image/upload/v1701961438/My%20CV/fotoMia_enxjjj.jpg" alt="" />
+        <img src={data.avatar} />
       </div>
     </div>
   );

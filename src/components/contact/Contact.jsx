@@ -18,7 +18,10 @@ const variants = {
   },
 };
 
-const Contact = () => {
+const Contact = ({data}) => {
+
+  const language = localStorage.getItem("language")
+ 
   const ref = useRef();
   const formRef = useRef();
   const [error, setError] = useState(false);
@@ -31,17 +34,25 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_94y20xo",
-        "template_v10u2oh",
+        "service_mxl01mi",
+        "template_p0xgtbk",
         formRef.current,
-        "pX_2hasGmGcuvjXIW"
+        "YI0L1RFB7egKe6O79"
       )
       .then(
         (result) => {
           setSuccess(true)
+          formRef.current.reset();
+          setTimeout(() => {
+            setSuccess(false);
+          }, 3000);
         },
         (error) => {
+          console.error(error.text);
           setError(true);
+          setTimeout(() => {
+            setError(false);
+          }, 3000);
         }
       );
   };
@@ -55,18 +66,18 @@ const Contact = () => {
       whileInView="animate"
     >
       <motion.div className="textContainer" variants={variants}>
-        <motion.h1 variants={variants}>Let’s work together</motion.h1>
+        <motion.h1 variants={variants}>{language === "en" ? "Let´s work together" : "Trabajemos juntos"}</motion.h1>
         <motion.div className="item" variants={variants}>
-          <h2>Mail</h2>
-          <span>narcishow1@icloud.com</span>
+          <h2>{language === "en" ? "Mail" : "Email"}</h2>
+          <span>{data.email}</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Address</h2>
-          <span>The world</span>
+          <h2>{language === "en" ? "Address" : "Dirección"}</h2>
+          <span>{data.address}</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Phone</h2>
-          <span>+34 618 363 439</span>
+          <h2>{language === "en" ? "Phone" : "Teléfono"}</h2>
+          <span>{data.phone}</span>
         </motion.div>
       </motion.div>
       <div className="formContainer">
@@ -106,12 +117,26 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
         >
-          <input type="text" required placeholder="Name" name="name"/>
-          <input type="email" required placeholder="Email" name="email"/>
-          <textarea rows={8} placeholder="Message" name="message"/>
-          <button>Submit</button>
-          {error && "Error"}
-          {success && "Success"}
+          <input type="text" required 
+          placeholder={language === "en" ? "Name" : "Nombre"}
+          name="name"/>
+          <input type="email" required 
+          placeholder={language === "en" ? "Mail" : "Email"}
+          name="email"/>
+          <textarea rows={8} 
+          placeholder={language === "en" ? "Message" : "Mensaje"}
+          name="message"/>
+          <button>{language === "en" ? "Submit" : "Enviar"}</button>
+          {error && (
+            <div className="error-message" style={{color:"red"}}>
+              {language === "en" ? "Not Sent" : "Error al enviar"}
+            </div>
+          )}
+          {success && (
+            <div className="success-message" style={{color:"whitesmoke"}}>
+              {language === "en" ? "Sent" : "Enviado"}
+            </div>
+          )}
         </motion.form>
       </div>
     </motion.div>
@@ -119,3 +144,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

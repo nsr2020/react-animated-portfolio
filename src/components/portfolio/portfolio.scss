@@ -2,6 +2,12 @@
 
 .portfolio {
   position: relative;
+  background-color: lighten(#0c0c1d, 20%);
+
+  h1 {
+    position: relative;
+    z-index: 11;
+  }
 
   .progress {
     position: sticky;
@@ -11,6 +17,9 @@
     text-align: center;
     color: orange;
     font-size: 36px;
+    z-index: 10;
+    background: linear-gradient(90deg, rgb(128, 0, 128) 0%, rgb(255, 30, 190) 100%);
+
 
     @include mobile {
       padding-top: calc(100vh - 100px);
@@ -19,7 +28,8 @@
 
     .progressBar {
       height: 10px;
-      background-color: white;
+      background-color: rgb(210, 230, 31);
+      z-index: 10;
     }
   }
 
@@ -32,8 +42,8 @@
     overflow: hidden;
 
     .wrapper {
-      max-width: 1366px;
-      height: 100%;
+      max-width: 1200px;
+      width: 100%; // Ajustado para asegurar el ancho completo
       margin: auto;
       display: flex;
       align-items: center;
@@ -46,7 +56,11 @@
 
       .imageContainer {
         flex: 1;
-        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto; // Ajustado para permitir el tamaño automático
+        padding-top: 50px;
 
         @include mobile {
           width: 100%;
@@ -54,12 +68,15 @@
         }
 
         img {
-          width: 100%;
-          height: 100%;
+          width: 300px; // Tamaño fijo para escritorio
+          height: 300px; // Tamaño fijo para escritorio
           object-fit: cover;
+          border-radius: 50px;
+          
 
           @include mobile {
-            object-fit: contain;
+            width: 100%; // Ajustar al 100% del contenedor en móvil
+            height: auto; // Mantener la proporción de la imagen en móvil
           }
         }
       }
@@ -69,6 +86,7 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
+        padding-top: 20px;
 
         @include mobile {
           transform: none !important;
@@ -86,21 +104,45 @@
         }
 
         p {
-          color: gray;
+          color: rgb(243, 174, 46);
           font-size: 20px;
+          font-weight: bold;
 
           @include mobile {
             font-size: 16px;
           }
         }
 
-        button {
+        .skillsContainer {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+
+          @include mobile {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .skillsImage {
+            width: 40px;
+            height: 40px; // Ajustar altura para mantener consistencia
+            object-fit: contain; // Ajustar para que la imagen se ajuste correctamente
+          }
+        }
+
+        a {
           background-color: orange;
           border: none;
           border-radius: 10px;
           padding: 10px;
           width: 200px;
           cursor: pointer;
+          text-align: center;
+          color:red;
+          font-weight: bolder;
+          &:hover{
+            background-color: rgb(31, 167, 230);
+          }
         }
       }
     }

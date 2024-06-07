@@ -2,7 +2,7 @@
 
 .navbar {
   height: 100px;
-  padding-right: 30px;
+  padding-right: 50px;
 
   .wrapper {
     max-width: 1366px;
@@ -27,11 +27,16 @@
 
     .social {
       display: flex;
-      gap: 20px;
+      align-items: center;
 
       img {
-        width: 18px;
-        height: 18px;
+        width: 40px;
+        cursor: pointer;
+        transition: all 0.5s;
+      }
+
+      &:hover img {
+        transform: scale(1.2);
       }
     }
   }

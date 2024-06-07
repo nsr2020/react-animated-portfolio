@@ -1,11 +1,15 @@
+import { useContext } from "react";
 import Sidebar from "../sidebar/Sidebar";
 import "./navbar.scss";
 import { motion } from "framer-motion";
+import { LanguageContext } from "../../providers/LanguageContext";
 
-const Navbar = () => {
+
+const LanguageSwitcher = () => {
+  const {language, toggleLanguage} = useContext(LanguageContext)
+ 
   return (
     <div className="navbar">
-      
       <Sidebar/>
       <div className="wrapper">
         <motion.span
@@ -16,19 +20,13 @@ const Navbar = () => {
          
         </motion.span>
         <div className="social">
-          <a href="www.facebook.com">
-            <img src="assets/facebook.png" alt="" />
-          </a>
-          <a href="#">
-            <img src="assets/instagram.png" alt="" />
-          </a>
-          <a href="#">
-            <img src="assets/youtube.png" alt="" />
-          </a>
+            <img src={language === "en" ? "/assets/ing.png" : "/assets/esp.png"}
+            onClick={toggleLanguage}
+             />
         </div>
       </div>
     </div>
   );
 };
 
-export default Navbar;
+export default LanguageSwitcher;

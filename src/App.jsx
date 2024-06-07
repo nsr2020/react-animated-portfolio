@@ -1,32 +1,39 @@
+import { useContext } from "react";
 import "./app.scss";
 import Contact from "./components/contact/Contact";
-import Cursor from "./components/cursor/Cursor";
+
 import Hero from "./components/hero/Hero";
-import Navbar from "./components/navbar/Navbar";
+import LanguageSwitcher from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
 import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
+import { LanguageContext } from "./providers/LanguageContext";
+import Education from "./components/education/Education";
 
 const App = () => {
+  const {data} = useContext(LanguageContext)
+  const language = localStorage.getItem("language")
   return (
     <div>
-      <Cursor />
-      <section id="Homepage">
-        <Navbar />
-        <Hero />
+      <section id={language === "en" ? "About" : "Sobre mi"}>
+        <LanguageSwitcher />
+        <Hero data={data}/>
       </section>
-      <section id="Services">
+      <section id={language === "en" ? "Experience" : "Experiencia"}>
         <Parallax type="services" />
       </section>
-      <section>
-        <Services />
+      <section id={language === "en" ? "Studies" : "Estudios"}>
+        <Services data={data} />
       </section>
-      <section id="Portfolio">
+      <section >
+        <Education data={data} />
+      </section>
+      <section id={language === "en" ? "Projects" : "Proyectos"}>
         <Parallax type="portfolio" />
       </section>
-      <Portfolio />
-      <section id="Contact">
-        <Contact />
+      <Portfolio data={data} />
+      <section id={language === "en" ? "Contact" : "Contacto"}>
+        <Contact data={data}/>
       </section>
     </div>
   );
