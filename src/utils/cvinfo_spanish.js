@@ -159,7 +159,7 @@ export const dataSpanish = {
         "/assets/git.png",
         "/assets/github.png",
         "/assets/js.png",
-        "/assets/react.png"
+        "https://res.cloudinary.com/dnju3aw4b/image/upload/v1717761773/PortFolio-React/react_zsberp.png"
       ],
     },
     {
@@ -174,7 +174,7 @@ export const dataSpanish = {
         "/assets/git.png",
         "/assets/github.png",
         "/assets/js.png",
-        "/assets/react.png"
+        "https://res.cloudinary.com/dnju3aw4b/image/upload/v1717761773/PortFolio-React/react_zsberp.png"
       ],
     },
     {
@@ -190,7 +190,7 @@ export const dataSpanish = {
         "/assets/github.png",
         "/assets/js.png",
         "/assets/nodejs.png",
-        "/assets/react.png"
+        "https://res.cloudinary.com/dnju3aw4b/image/upload/v1717761773/PortFolio-React/react_zsberp.png"
       ],
     },
   ],
