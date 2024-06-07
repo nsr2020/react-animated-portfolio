@@ -133,7 +133,7 @@ export const dataEnglish = {
       ],
     },
     {
-      image: "public/assets/music.png",
+      image: "/assets/music.png",
       title: "MusicShop",
       description: "This project has been created using NodeJs and MongoDB and then connecting the Api to this Front that simulates a music shop",
       link: "https://github.com/nsr2020/Proyecto10_Front/tree/main/src/pages",
@@ -159,7 +159,7 @@ export const dataEnglish = {
         "/assets/git.png",
         "/assets/github.png",
         "/assets/js.png",
-        "public/assets/react.png"
+        "/assets/react.png"
       ],
     },
     {
@@ -174,11 +174,11 @@ export const dataEnglish = {
         "/assets/git.png",
         "/assets/github.png",
         "/assets/js.png",
-        "public/assets/react.png"
+        "/assets/react.png"
       ],
     },
     {
-      image: "public/assets/iptvTrailers.PNG",
+      image: "/assets/iptvTrailers.PNG",
       title: "Iptv Trailers",
       description: "In this project I have simulated a Full Stack job creating a IPTV trailer of YouTube with different platforms",
       link: "https://github.com/nsr2020/Project13_Front",
@@ -190,7 +190,7 @@ export const dataEnglish = {
         "/assets/github.png",
         "/assets/js.png",
         "/assets/nodejs.png",
-        "public/assets/react.png"
+        "/assets/react.png"
       ],
     },
   ],
