@@ -119,7 +119,7 @@ export const dataEnglish = {
       ],
     },
     {
-      image: "/assets/games.png",
+      image: "/assets/gamehub1.jpg",
       title: "GameHub",
       description: "This project is of a few games I have created with JavaScript.",
       link: "https://github.com/nsr2020/GameHub",
@@ -133,7 +133,7 @@ export const dataEnglish = {
       ],
     },
     {
-      image: "/assets/musica.png",
+      image: "/assets/music1.jpg",
       title: "MusicShop",
       description: "This project has been created using NodeJs and MongoDB and then connecting the Api to this Front that simulates a music shop",
       link: "https://github.com/nsr2020/Proyecto10_Front/tree/main/src/pages",
@@ -148,7 +148,7 @@ export const dataEnglish = {
       ],
     },
     {
-      image: "/assets/recipes.PNG",
+      image: "/assets/food1.jpg",
       title: "Recipes from the World",
       description: "In this project made with React, you can find all the recipes for several countries",
       link: "https://github.com/nsr2020/Project_11",
@@ -163,7 +163,7 @@ export const dataEnglish = {
       ],
     },
     {
-      image: "/assets/gamesHub2.PNG",
+      image: "/assets/gamehub2.jpg",
       title: "GameHub 2 React",
       description: "I have made two games with React",
       link: "https://github.com/nsr2020/Project12",
@@ -178,7 +178,7 @@ export const dataEnglish = {
       ],
     },
     {
-      image: "https://res.cloudinary.com/dnju3aw4b/image/upload/v1717761526/PortFolio-React/trailers_zaaglv.png",
+      image: "/assets/movie1.jpg",
       title: "Iptv Trailers",
       description: "In this project I have simulated a Full Stack job creating a IPTV trailer of YouTube with different platforms",
       link: "https://github.com/nsr2020/Project13_Front",

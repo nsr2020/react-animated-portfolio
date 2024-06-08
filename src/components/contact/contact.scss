@@ -84,6 +84,10 @@
         background-color: orange;
         cursor: pointer;
         font-weight: 500;
+        transition: all 0.5s;
+        &:hover{
+          transform: scale(0.9);
+        }
         @include mobile {
           padding: 10px;
         }
