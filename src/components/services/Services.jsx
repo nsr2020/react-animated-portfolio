@@ -19,9 +19,9 @@ const variants = {
   },
 };
 
-const Services = ({data}) => {
+const Services = ({data, language}) => {
   const ref = useRef();
-  const language = localStorage.getItem("language")
+ 
   return (
     <motion.div
       className="services"

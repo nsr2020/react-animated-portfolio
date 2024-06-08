@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import "./app.scss";
 import Contact from "./components/contact/Contact";
 
@@ -11,29 +11,30 @@ import { LanguageContext } from "./providers/LanguageContext";
 import Education from "./components/education/Education";
 
 const App = () => {
-  const {data} = useContext(LanguageContext)
-  const language = localStorage.getItem("language")
+  const {data, language} = useContext(LanguageContext)
+ 
+  
   return (
     <div>
       <section id={language === "en" ? "About" : "Sobre mi"}>
         <LanguageSwitcher />
-        <Hero data={data}/>
+        <Hero data={data} language={language}/>
       </section>
       <section id={language === "en" ? "Experience" : "Experiencia"}>
         <Parallax type="services" />
       </section>
       <section id={language === "en" ? "Studies" : "Estudios"}>
-        <Services data={data} />
+        <Services data={data} language={language}/>
       </section>
       <section >
-        <Education data={data} />
+        <Education data={data} language={language}/>
       </section>
       <section id={language === "en" ? "Projects" : "Proyectos"}>
         <Parallax type="portfolio" />
       </section>
       <Portfolio data={data} />
       <section id={language === "en" ? "Contact" : "Contacto"}>
-        <Contact data={data}/>
+        <Contact data={data} language={language}/>
       </section>
     </div>
   );

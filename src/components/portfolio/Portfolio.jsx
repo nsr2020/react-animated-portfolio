@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
@@ -44,9 +44,13 @@ const Single = ({ data }) => {
   );
 };
 
-const Portfolio = ({data}) => {
+const Portfolio = ({data, language}) => {
   const ref = useRef();
-  const language = localStorage.getItem("language");
+  
+  useEffect(()=>{
+    
+  },[language])
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["end end", "start start"],
@@ -60,7 +64,7 @@ const Portfolio = ({data}) => {
   return (
     <div className="portfolio" ref={ref}>
       <div className="progress">
-        <h1>{language === "en" ? "PROJECTS" : "PROYECTOS"}</h1>
+        <h1>{language === "en"  ? "PROJECTS" : "PROYECTOS"} </h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
       {data.projects.map((data, index) => (

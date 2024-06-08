@@ -18,10 +18,8 @@ const variants = {
   },
 };
 
-const Contact = ({data}) => {
+const Contact = ({data, language}) => {
 
-  const language = localStorage.getItem("language")
- 
   const ref = useRef();
   const formRef = useRef();
   const [error, setError] = useState(false);
