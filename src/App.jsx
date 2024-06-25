@@ -12,7 +12,6 @@ import Education from "./components/education/Education";
 
 const App = () => {
   const {data, language} = useContext(LanguageContext)
- 
   
   return (
     <div>
@@ -32,7 +31,7 @@ const App = () => {
       <section id={language === "en" ? "Projects" : "Proyectos"}>
         <Parallax type="portfolio" />
       </section>
-      <Portfolio data={data} />
+      <Portfolio data={data} language={language}/>
       <section id={language === "en" ? "Contact" : "Contacto"}>
         <Contact data={data} language={language}/>
       </section>

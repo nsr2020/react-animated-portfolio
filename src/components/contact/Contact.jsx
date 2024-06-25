@@ -70,8 +70,15 @@ const Contact = ({data, language}) => {
           <span>{data.email}</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>{language === "en" ? "Address" : "Dirección"}</h2>
-          <span>{data.address}</span>
+          <h2>{language === "en" ? "Address" : "Linkedin"}</h2>
+          <motion.a
+      href="https://www.linkedin.com/in/narciso-serrano-rabal/"
+      target="_blank" // Abre el enlace en una nueva pestaña
+      whileHover={{ scale: 1.1 }} // Ejemplo de animación al pasar el ratón
+      whileTap={{ scale: 0.9 }} // Ejemplo de animación al hacer clic
+    >
+      📜
+    </motion.a>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>{language === "en" ? "Phone" : "Teléfono"}</h2>
@@ -85,7 +92,7 @@ const Contact = ({data, language}) => {
           whileInView={{ opacity: 0 }}
           transition={{ delay: 3, duration: 1 }}
         >
-          <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
+          <svg width="250px" height="250px" viewBox="0 0 32.666 32.666">
             <motion.path
               strokeWidth={0.2}
               fill="none"

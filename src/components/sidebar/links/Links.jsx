@@ -26,12 +26,12 @@ const itemVariants = {
   },
 };
 
-const Links = () => {
+const Links = ({language}) => {
   const itemsEnglish = ["About", "Experience", "Studies", "Projects", "Contact"];
   const itemsSpanish = ["Sobre mi", "Experiencia", "Estudios", "Proyectos", "Contacto"];
 
   const [items, setItems] =useState(itemsEnglish)
-  const language = localStorage.getItem("language")
+  
 
   useEffect(() => {
    if (language === "en") {

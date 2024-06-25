@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
@@ -29,7 +29,7 @@ const Single = ({ data }) => {
         ))}
       </div>
       
-      <div style={{ display: "flex", flexDirection: "row", gap: "20px", widt:"100%" }}>
+      <div style={{ display: "flex", flexDirection: "row", gap: "20px", width:"100%" }}>
             <a href={data.link} target="_blank" rel="noopener noreferrer">
         GitHub
       </a>
@@ -46,6 +46,7 @@ const Single = ({ data }) => {
 
 const Portfolio = ({data, language}) => {
   const ref = useRef();
+ 
   
   useEffect(()=>{
     

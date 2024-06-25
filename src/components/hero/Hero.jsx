@@ -37,7 +37,7 @@ const sliderVariants = {
   },
 };
 
-const Hero = ({data}) => {
+const Hero = ({data, language}) => {
   return (
     <div className="hero">
       <div className="wrapper">

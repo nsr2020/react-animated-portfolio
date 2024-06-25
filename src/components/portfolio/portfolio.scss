@@ -7,13 +7,16 @@
   h1 {
     position: relative;
     z-index: 11;
+    @include mobile{
+      font-size:smaller;
+    }
   }
 
   .progress {
     position: sticky;
     top: 0;
     left: 0;
-    padding-top: 50px;
+    padding-top: 60px;
     text-align: center;
     color: orange;
     font-size: 36px;
@@ -22,7 +25,7 @@
 
 
     @include mobile {
-      padding-top: calc(100vh - 100px);
+      padding-top: 40px;
       font-size: 24px;
     }
 
@@ -76,7 +79,7 @@
 
           @include mobile {
             width: 100%; // Ajustar al 100% del contenedor en móvil
-            height: auto; // Mantener la proporción de la imagen en móvil
+            /* height: auto; */ // Mantener la proporción de la imagen en móvil
           }
         }
       }
@@ -90,9 +93,10 @@
 
         @include mobile {
           transform: none !important;
-          padding: 10px;
+          padding-top: 0px;
           align-items: center;
           text-align: center;
+          width: 90%;
         }
 
         h2 {
@@ -127,6 +131,10 @@
             width: 40px;
             height: 40px; // Ajustar altura para mantener consistencia
             object-fit: contain; // Ajustar para que la imagen se ajuste correctamente
+            @include mobile{
+              width: 25px;
+              height: 25px;
+            }
           }
         }
 
@@ -143,6 +151,7 @@
           &:hover{
             background-color: rgb(31, 167, 230);
           }
+         
         }
       }
     }
