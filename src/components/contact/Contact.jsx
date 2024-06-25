@@ -70,14 +70,12 @@ const Contact = ({data, language}) => {
           <span>{data.email}</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>{language === "en" ? "Address" : "Linkedin"}</h2>
+         {/*  <h2>{language === "en" ? "Address" : "Linkedin"}</h2> */}
           <motion.a
       href="https://www.linkedin.com/in/narciso-serrano-rabal/"
-      target="_blank" // Abre el enlace en una nueva pestaña
-      whileHover={{ scale: 1.1 }} // Ejemplo de animación al pasar el ratón
-      whileTap={{ scale: 0.9 }} // Ejemplo de animación al hacer clic
+      target="_blank"
     >
-      📜
+      {language === "en" ? "Address" : "Linkedin"}
     </motion.a>
         </motion.div>
         <motion.div className="item" variants={variants}>
