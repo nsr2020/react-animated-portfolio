@@ -74,8 +74,10 @@ const Contact = ({data, language}) => {
           <motion.a
       href="https://www.linkedin.com/in/narciso-serrano-rabal/"
       target="_blank"
+      color="yellow"
+      fontweight="bold"
     >
-      {language === "en" ? "Address" : "Linkedin"}
+      LINKEDIN
     </motion.a>
         </motion.div>
         <motion.div className="item" variants={variants}>
