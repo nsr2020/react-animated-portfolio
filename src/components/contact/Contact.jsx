@@ -76,7 +76,7 @@ const Contact = ({data, language}) => {
       target="_blank"
       style={{ color: "yellow", fontWeight: "bold" }}
     >
-      LINKEDIN
+      <motion.img src="/assets/linkedin.png" style={{width:"50px", height:"50px"}}></motion.img>
     </motion.a>
         </motion.div>
         <motion.div className="item" variants={variants}>
