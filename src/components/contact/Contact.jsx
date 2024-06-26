@@ -70,13 +70,12 @@ const Contact = ({data, language}) => {
           <span>{data.email}</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-         {/*  <h2>{language === "en" ? "Address" : "Linkedin"}</h2> */}
           <motion.a
       href="https://www.linkedin.com/in/narciso-serrano-rabal/"
       target="_blank"
       style={{ color: "yellow", fontWeight: "bold" }}
     >
-      <motion.img src="/assets/linkedin.png" style={{width:"50px", height:"50px"}}></motion.img>
+      <motion.img src="/assets/in2.png" style={{width:"50px", height:"50px"}}></motion.img>
     </motion.a>
         </motion.div>
         <motion.div className="item" variants={variants}>
