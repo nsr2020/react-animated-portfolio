@@ -2,7 +2,7 @@ export const dataEnglish = {
   name: "Narciso Serrano",
   title:"Full Stack Developer",
   address: "Calle Vinateros, 15",
-  email: "narcishow1@hotmail.com",
+  email: "narcishow1@icloud.com",
   phone:"+34 618 363 439",
   avatar:
     "https://res.cloudinary.com/dnju3aw4b/image/upload/v1721905061/My%20CV/mcazt9qluujok2yvdjnm.jpg",

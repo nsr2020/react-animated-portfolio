@@ -75,7 +75,7 @@ const Contact = ({data, language}) => {
       target="_blank"
       style={{ color: "yellow", fontWeight: "bold" }}
     >
-      <motion.img src="/assets/in2.png" style={{width:"50px", height:"50px"}}></motion.img>
+      <motion.img className="linkedinImg" src="/assets/in2.png" style={{width:"50px", height:"50px"}}></motion.img>
     </motion.a>
         </motion.div>
         <motion.div className="item" variants={variants}>

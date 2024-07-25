@@ -10,6 +10,9 @@
     @include mobile{
       font-size:smaller;
     }
+    @include tablet{
+      font-size:larger;
+    }
   }
 
   .progress {
@@ -27,6 +30,10 @@
     @include mobile {
       padding-top: 40px;
       font-size: 24px;
+    }
+    @include tablet {
+      padding-top: 70px;
+      font-size: 38px;
     }
 
     .progressBar {
@@ -78,8 +85,13 @@
           
 
           @include mobile {
-            width: 100%; // Ajustar al 100% del contenedor en móvil
-            /* height: auto; */ // Mantener la proporción de la imagen en móvil
+            width: 100%;
+            
+          }
+          @include tablet {
+            width: 100%;
+            margin-left: 30px;
+            
           }
         }
       }
@@ -105,6 +117,9 @@
           @include mobile {
             font-size: 36px;
           }
+          @include tablet {
+            font-size: 56px;
+          }
         }
 
         p {
@@ -114,6 +129,10 @@
 
           @include mobile {
             font-size: 16px;
+          }
+          @include tablet {
+            font-size: 18px;
+            text-align: left
           }
         }
 
@@ -126,6 +145,12 @@
             flex-direction: column;
             align-items: center;
           }
+          @include tablet {
+            
+            flex-direction: column;
+            margint-left:30px;
+          }
+
 
           .skillsImage {
             width: 40px;
@@ -134,6 +159,10 @@
             @include mobile{
               width: 25px;
               height: 25px;
+            }
+            @include tablet{
+              width: 35px;
+              height: 35px;
             }
           }
         }
