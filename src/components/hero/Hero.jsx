@@ -61,7 +61,7 @@ const Hero = ({data, language}) => {
         initial="initial"
         animate="animate"
       >
-        data.name
+        {data.name}
       </motion.div>
       <div className="imageContainer">
         <img src={data.avatar} />
