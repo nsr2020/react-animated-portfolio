@@ -5,7 +5,7 @@ export const dataEnglish = {
   email: "narcishow1@hotmail.com",
   phone:"+34 618 363 439",
   avatar:
-    "https://res.cloudinary.com/dnju3aw4b/image/upload/v1701961438/My%20CV/fotoMia_enxjjj.jpg",
+    "https://res.cloudinary.com/dnju3aw4b/image/upload/v1721905061/My%20CV/mcazt9qluujok2yvdjnm.jpg",
   aboutMe:
     "I love travelling, meeting new people and above all finding my inner peace, so that I can manage my day to day life in a way that is healthier for me. I have been working in Customer Service for many years, but I had studied Computer Science a few years ago. Because of this, I decided it was time to pick up where I left off and reinvent myself professionally. I love programming and I think I can achieve very nice things in the future.",
   education: [

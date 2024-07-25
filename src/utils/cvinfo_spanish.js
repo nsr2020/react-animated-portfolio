@@ -5,7 +5,7 @@ export const dataSpanish = {
   email: "narcishow1@hotmail.com",
   phone:"+34 618 363 439",
   avatar:
-    "https://res.cloudinary.com/dnju3aw4b/image/upload/v1701961438/My%20CV/fotoMia_enxjjj.jpg",
+    "https://res.cloudinary.com/dnju3aw4b/image/upload/v1721905061/My%20CV/mcazt9qluujok2yvdjnm.jpg",
   aboutMe:
     "Me encanta viajar, conocer gente nueva y, sobre todo, encontrar mi paz interior, para poder manejar mi vida diaria de una manera más saludable para mí. He trabajado en Atención al Cliente durante muchos años, pero estudié Ciencias de la Computación hace unos años. Debido a esto, decidí que era hora de retomar donde lo dejé y reinventarme profesionalmente. Me encanta programar y creo que puedo lograr cosas muy bonitas en el futuro.",
   education: [
